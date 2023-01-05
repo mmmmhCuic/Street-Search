@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in</title>
+    <link rel="shortcut icon" href="img/">
+
+    <link rel="stylesheet" href="/css/styleSI.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js"></script>
+</head>
+<body>
+    <nav>
+        <a class="menu" onclick="menu()">Menu</a>
+        <a id="sign"href="index.html">Home</a>
+
+    </nav>
+    <main>
+        <form id="boxlogin" action="/after-sign.html">
+            <div class="boxlogin">
+            <ul>
+                <li>
+                    <h1 style="margin: 5px;">Sign-in <i class="fa-solid fa-pencil"></i></h1>
+                </li>
+                <li>
+            <input type="text" pattern="[A-Za-z]{4,8}" placeholder="Username" required="required">
+            <label for="passworld">Creat Username</label>
+                </li>
+                <li>
+            <input type="e-mail" placeholder="e-mail" required="required">
+            <label for="e-mail" >Creat e-mail</label>
+                </li>
+                <li>
+            <input type="password" pattern="[0-9A-Za-z]{6,18}" placeholder="passworld" required="required">
+            <label for="passworld">Creat password</label>
+            </div>
+                </li>
+                <li>
+                    <input class="submit" type="submit">
+                <li>
+                <a href="sign-up.html" style="margin-left: 5px;">You have accund ? Sign-up</a>
+                </li>
+            </ul>
+        </form>
+    </main>
+</body>
+</html>
