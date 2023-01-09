@@ -1,0 +1,186 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.5s;
+    scroll-behavior: smooth;
+    font-family: 'Chivo Mono', monospace;
+    list-style: none;
+}
+body{
+    display: flex;
+    flex-direction: column;
+
+    background: rgb(20, 20, 20);
+    overflow-x: hidden;
+}
+::-webkit-scrollbar{
+    width: 15px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(0deg, rgb(102, 0, 255), rgb(255, 0, 0));
+    border-radius: 10px;
+}
+nav{
+    z-index: 4;
+    display: flex;
+    height: auto;
+    width: 100%;
+    position: fixed;
+    justify-content: center;
+    padding: 15px 25px;
+    background-color: rgb(23, 23, 23);
+    box-shadow: inset 0px -1px 0px black;
+}
+
+nav a{
+    justify-content: center;
+    margin: 15px 5px;
+    font-size: 20px;
+    font-weight: 500px;
+    text-decoration: none;
+    color: aliceblue;
+    display: inline-block;
+    position: relative; 
+}
+nav:hover a{
+    font-size: 20px;
+    font-weight: 500px;
+    text-decoration: none;
+    color: aliceblue;
+    display: inline-block;
+    position: relative;
+}
+nav a::after{
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    width: 100%;
+    height: 1px;
+    transform: scaleX(0);
+    transform-origin: left;
+    background-color: aliceblue;
+    transition: transform 0.3s ease-out;
+}
+nav a:hover::after{
+    transform: scaleX(1);
+}
+
+h1, h2, h3, a{
+    color: #fff;
+    text-decoration: none;
+}
+main{
+    margin-top: 75px;
+}
+
+.boxlogin{
+    border-bottom: 2px solid #fff;
+}
+
+#boxlogin{
+    margin: 35%;
+    margin-bottom: 0%;
+    margin-top: 10%;
+
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgb(23, 23, 23);
+}
+
+input{
+    margin: 5px;
+
+    padding: 15px;
+    border-radius: 10px;
+    border:2px solid rgb(0, 0, 0);
+    outline: none;
+}
+
+input[type="text"]:invalid{
+    animation: shak .3s;
+    background-color: rgb(238, 19, 19);
+}
+input[type="text"]:valid{
+    background-color: rgb(50, 83, 18);
+}
+input[type="mail"]:invalid{
+    animation: shak .3s;
+    background-color: rgb(238, 19, 19);
+}
+input[type="mail"]:valid{
+    background-color: rgb(50, 83, 18);
+}
+input[type="password"]:invalid{
+    animation: shak .3s;
+    background-color: rgb(238, 19, 19);
+}
+input[type="password"]:valid{
+    background-color: rgb(50, 83, 18);
+}
+
+@keyframes shak{
+    25%{
+        transform: translateX(3px);
+    }
+    50%{
+        transform: translateX(-3px);
+    }
+    75%{
+        transform: translateX(3px);
+    }
+}
+
+input::placeholder{
+    opacity: 0%;
+}
+.submit{
+    width: 98%;
+}
+@media (max-width: 1200px) {
+    #boxlogin{
+        margin: 25%;
+        margin-top: 5%;
+        margin-bottom: 0%;
+    }
+}
+@media (max-width: 715px) {
+    #boxlogin{
+        margin: 20%;
+        margin-top: 5%;
+        margin-bottom: 0%;
+
+        height: 460px;
+    }
+    #boxlogin a{
+        font-size: 15px;
+    }
+    input{
+        width: 98%;
+        margin-top: 10%;
+    }
+    input::placeholder{
+        opacity: 100%;
+    }
+    label{
+        display: none;
+    }
+}
+
+@media (max-width: 420px){
+    h1{
+        font-size: 25px;
+    }
+    #boxlogin{
+        margin-left: 5%;
+        width: 90%;
+    }
+    #boxlogin a{
+        color: black;
+    }
+    input{
+        margin-top: 10%;
+    }
+}

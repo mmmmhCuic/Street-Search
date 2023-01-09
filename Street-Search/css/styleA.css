@@ -1,0 +1,406 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.5s;
+    font-family: 'Chivo Mono', monospace;
+    list-style: none;
+}
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(0deg, rgb(29, 0, 156), rgb(255, 47, 0));
+    border-radius: 10px;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    background: rgb(23, 23, 23);
+    width: 100vh;
+}
+nav{
+    position: fixed;
+    display: flex;
+    width: 100%;
+}
+
+button{
+    width: 100%;
+
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+
+    background-color: gray;
+}
+button a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.cactu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
+
+    height: 930px;
+    width: 100%;
+}
+
+.cactu-head{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    width: 0px;
+    height: 0px;
+    border: green 150px solid;
+    border-radius: 50% 50% 0% 0%;
+    animation: jumping 1s infinite;
+}
+.cactu-eyes{
+    margin-right: 30px;
+    justify-content: flex-start;
+    border: 30px solid black;
+    border-radius: 50%;
+}
+.cactu-eyesB{
+    position: absolute;
+    margin-top: -5px;
+
+    border: 13px solid rgb(255, 255, 255);
+    border-radius: 50%;
+    animation: cactu-eyes 3s infinite;
+}
+
+.cactu-arm{
+    position: relative;
+    margin-top: -160px;
+    z-index: 2;
+    border-radius: 50% 50% 50% 0%;
+
+    width: 350px;
+    height: 0px;
+    border: green 60px solid;
+    transform-origin:bottom right ;
+}
+.cactu-arm1{
+    position: relative;
+    margin-left:  40px;
+    z-index: 2;
+    border-radius: 70% 0% 0% 50%;
+
+    width: 250px;
+    height: 0px;
+    border: green 60px solid;
+    rotate: 90deg;
+    transform-origin:top right ;
+}
+
+.cactu-arm2{
+    position: relative;
+    margin-top: -140px;
+    margin-left: -450px;
+    z-index: 2;
+    border-radius: 50% 50% 0% 50%;
+
+    width: 350px;
+    height: 0px;
+    border: green 60px solid;
+    transform-origin:bottom left;
+}
+.cactu-arm3{
+    position: relative;
+    margin-left:  -190px;
+    z-index: 2;
+    border-radius: 70% 0% 0% 70%;
+
+    width: 250px;
+    height: 0px;
+    border: green 60px solid;
+    rotate: 90deg;
+    transform-origin:top right ;
+}
+
+.cactu-corp{
+    width: 0px;
+    height: 0px;
+    border: green 150px solid;
+    animation: jumping1 1s infinite;
+}
+.cactu-pot{
+    width: 400px;
+    height: 0px;
+    border: transparent 50px solid;
+    border-top:200px solid crimson ;
+    animation: pot 1s infinite;
+}
+.herbe{
+    height: 10px;
+    width: 100%;
+    border: 10px solid rgb(0, 68, 0);
+
+}
+@keyframes cactu-eyes {
+
+    0%{
+        margin-left: -13px;
+    }
+    25%{
+        margin-left: 10px;
+    }
+    50%{
+        margin-left: -50px;
+    }
+    75%{
+    margin-left: -13px;
+    }
+    100%{
+        margin-left: -13px;
+    }    
+}
+
+@keyframes cactu-eyes {
+
+    0%{
+        margin-left: -4px;
+    }
+    25%{
+        margin-left: 5px;
+    }
+    50%{
+        margin-left: -15px;
+    }
+    75%{
+    margin-left: -4px;
+    }
+    100%{
+        margin-left: -4px;
+    }
+}
+    @keyframes jumping {
+        0%{
+            margin-bottom: 0px;
+        }
+        50%{
+            margin-top: 150px;
+        }
+        100%{
+            margin-bottom: 0px;
+        }
+    }
+    @keyframes jumping1 {
+        0%{
+            margin-bottom: 30px;
+        }
+        50%{
+            margin-bottom: 0px;
+        }
+        100%{
+            margin-bottom: 30px;
+        }
+    }
+    @keyframes pot {
+        0%{
+        border-top: 200px solid crimson;
+        }
+        50%{
+        border-top: 190px solid crimson;                
+        }
+        75%{
+            border-top: 240px solid crimson;
+        }
+        100%{
+            border-top: 200px solid crimson;
+        }
+    }
+
+
+
+
+@media (max-width:1000px) {
+    .cactu{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 5%;
+    
+        height: 500px;
+        width: 1000px;
+    }
+    
+    .cactu-head{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    
+        width: 0px;
+        height: 0px;
+        border: green 75px solid;
+        border-radius: 50% 50% 0% 0%;
+        animation: jumping 1s infinite;    
+    }
+    .cactu-eyes{
+        margin-right: 30px;
+        justify-content: flex-start;
+        border: 15px solid black;
+        border-radius: 50%;
+    }
+    .cactu-eyesB{
+        position: absolute;
+        margin-top: -5px;
+    
+        border: 6.5px solid rgb(255, 255, 255);
+        border-radius: 50%;
+        animation: cactu-eyes 3s infinite;
+    }
+    
+    .cactu-arm{
+        position: relative;
+        margin-top: -120px;
+        z-index: 2;
+        border-radius: 50% 50% 50% 0%;
+    
+        width: 175px;
+        height: 0px;
+        border: green 30px solid;
+        transform-origin:bottom right ;
+    }
+    .cactu-arm1{
+        position: relative;
+        margin-left:  20px;
+        z-index: 2;
+        border-radius: 70% 0% 0% 50%;
+    
+        width: 125px;
+        height: 0px;
+        border: green 30px solid;
+        rotate: 90deg;
+        transform-origin:top right ;
+    }
+    
+    .cactu-arm2{
+        position: relative;
+        margin-top: -70px;
+        margin-left: -225px;
+        z-index: 2;
+        border-radius: 50% 50% 0% 50%;
+    
+        width: 175px;
+        height: 0px;
+        border: green 30px solid;
+        transform-origin:bottom left;
+    }
+    .cactu-arm3{
+        position: relative;
+        margin-left:  -95px;
+        z-index: 2;
+        border-radius: 70% 0% 0% 70%;
+    
+        width: 125px;
+        height: 0px;
+        border: green 30px solid;
+        rotate: 90deg;
+        transform-origin:top right ;
+    }
+    
+    .cactu-corp{
+        width: 0px;
+        height: 0px;
+        border: green 75px solid;
+        animation: jumping1 1s infinite;
+    }
+    .cactu-pot{
+        width: 200px;
+        border: transparent 25px solid;
+        border-top:100px solid crimson;
+        animation: pot 1s infinite;   
+    }
+    .herbe{
+        height: 10px;
+        width: 100%;
+        border: 10px solid rgb(0, 68, 0);
+
+    }
+    @keyframes cactu-eyes {
+
+        0%{
+            margin-left: -4px;
+        }
+        25%{
+            margin-left: 5px;
+        }
+        50%{
+            margin-left: -15px;
+        }
+        75%{
+        margin-left: -4px;
+        }
+        100%{
+            margin-left: -4px;
+        }
+    }
+        @keyframes jumping {
+            0%{
+                margin-bottom: 0px;
+            }
+            50%{
+                margin-top: 120px;
+            }
+            100%{
+                margin-bottom: 0px;
+            }
+        }
+        @keyframes jumping1 {
+            0%{
+                margin-bottom: 20px;
+            }
+            50%{
+                margin-bottom: 0px;
+            }
+            100%{
+                margin-bottom: 20px;
+            }
+        }
+        @keyframes pot {
+            0%{
+            border-top: 100px solid crimson;
+            }
+            50%{
+            border-top: 90px solid crimson;                
+            }
+            75%{
+                border-top: 120px solid crimson;
+            }
+            100%{
+            border-top: 100px solid crimson;
+            }
+        }
+    }
+    @media (max-width:570px) {
+        body{
+            width: 100%;
+            margin: 0%;
+        }
+        button{
+            width: 61%;
+        }
+        .cactu{
+            align-items: flex-start;
+            margin-left: 200px;
+            width: 28%;
+        }
+        .cactu-pot{
+            margin-left: -25px;
+        }
+        .herbe{
+            width: 100%;
+        }
+    }
